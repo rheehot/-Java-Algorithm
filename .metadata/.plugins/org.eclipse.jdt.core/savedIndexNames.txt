@@ -1,0 +1,2 @@
+INDEX VERSION 1.131+C:\Users\Samsung\Desktop\자바 알고리즘\.metadata\.plugins\org.eclipse.jdt.core
+113558702.index

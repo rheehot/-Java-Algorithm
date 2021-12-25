@@ -1,0 +1,16 @@
+import java.util.*;
+
+
+public class Main_1000_Scanner_test {
+
+	public static void main(String[] args) throws Exception{
+		Scanner sc = new Scanner(System.in);
+		
+		int num = sc.nextInt();
+		
+		System.out.println("num : " + num);
+		
+		
+	}
+
+}
