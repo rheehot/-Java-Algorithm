@@ -13,16 +13,19 @@ public class Main_10871_X보다작은수 {
 		int length = Integer.parseInt(temp[0]);
 		int range = Integer.parseInt(temp[1]);
 		
-		List<String> list = new ArrayList<>();
+		List<Integer> list = new ArrayList<>();
+		String arr[] = br.readLine().split(" ");
 		
-		StringTokenizer st = new StringTokenizer(br.readLine(), ",");
-		System.out.println(st.countTokens());
-		
-		for(int i=0; i<st.countTokens(); i++) {
-			list.add(st.nextToken());
+		for(int i=0; i<arr.length; i++) {
+			int num = Integer.parseInt(arr[i]);
+			
+			if(num < range) {
+				list.add(num);
+			}
 		}
 		
-		System.out.println(list);
+		for(int i=0; i<list.size(); i++) {
+			System.out.print(list.get(i) + " ");
+		}	
 	}
-
 }
