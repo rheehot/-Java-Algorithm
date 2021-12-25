@@ -14,7 +14,6 @@ public class Main_11720 {
 			sum += Character.getNumericValue(num2.charAt(i));
 		}
 		
-		System.out.println(sum);
 
 	}
 
