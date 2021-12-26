@@ -14,7 +14,6 @@ public class Main_10950 {
 			String num1 = st.nextToken();
 			String num2 = st.nextToken();
 			System.out.println(Integer.parseInt(num1) + Integer.parseInt(num2));
-			
 		}
 	}
 }
