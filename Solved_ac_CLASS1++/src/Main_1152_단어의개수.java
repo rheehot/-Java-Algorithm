@@ -13,5 +13,4 @@ public class Main_1152_단어의개수 {
 		int count = st.countTokens();
 		System.out.println(count);
 	}
-
 }
