@@ -22,6 +22,7 @@ public class Main_8958_OXÄûÁî {
 					count = 0;
 				}
 			}
+			
 			System.out.println(sum);
 			sum = 0;
 			count = 0;
