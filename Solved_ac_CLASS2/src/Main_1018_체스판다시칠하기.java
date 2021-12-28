@@ -4,61 +4,51 @@ import java.util.*;
 public class Main_1018_체스판다시칠하기 {
 	// 비교할 체스판 생성
 	final static String wStart[][] = {{"W","B","W","B","W","B","W","B"},
-								{"B","W","B","W","B","W","B","W"},
-								{"W","B","W","B","W","B","W","B"},
-								{"B","W","B","W","B","W","B","W"},
-								{"W","B","W","B","W","B","W","B"},
-								{"B","W","B","W","B","W","B","W"},
-								{"W","B","W","B","W","B","W","B"},
-								{"B","W","B","W","B","W","B","W"}};
+									  {"B","W","B","W","B","W","B","W"},
+									  {"W","B","W","B","W","B","W","B"},
+									  {"B","W","B","W","B","W","B","W"},
+									  {"W","B","W","B","W","B","W","B"},
+								      {"B","W","B","W","B","W","B","W"},
+									  {"W","B","W","B","W","B","W","B"},
+									  {"B","W","B","W","B","W","B","W"}};
 	
 	final static String bStart[][] = {{"B","W","B","W","B","W","B","W"},
-								{"W","B","W","B","W","B","W","B"},
-								{"B","W","B","W","B","W","B","W"},
-								{"W","B","W","B","W","B","W","B"},
-								{"B","W","B","W","B","W","B","W"},
-								{"W","B","W","B","W","B","W","B"},
-								{"B","W","B","W","B","W","B","W"},
-								{"W","B","W","B","W","B","W","B"}};
+								      {"W","B","W","B","W","B","W","B"},
+								      {"B","W","B","W","B","W","B","W"},
+								      {"W","B","W","B","W","B","W","B"},
+								      {"B","W","B","W","B","W","B","W"},
+								      {"W","B","W","B","W","B","W","B"},
+								      {"B","W","B","W","B","W","B","W"},
+								      {"W","B","W","B","W","B","W","B"}};
 	
 	// 최솟값을 계산하는 메소드
 	public static int find(String[][] temp) {
-		int count = 0;
+		int count1 = 0;
+		int count2 = 0;
+		int result = 0;
 		int i=0;
 		int j=0;
 		
 		char first = temp[0][0].charAt(0);
-		System.out.println("first : " + first);
-		
-		if(first == 'B') {
+
 			while(i<8) {
 				j = 0;
 				while(j<8) {
-			
 					if(temp[i][j].charAt(0) != bStart[i][j].charAt(0)) {
-						count ++;
+						count1 ++;
 					}
-					j++;
-				}
-				i++;
-			}
-		}
-		else if(first == 'W') {
-			while(i<8) {
-				j = 0;
-				while(j<8) {
+					
 					if(temp[i][j].charAt(0) != wStart[i][j].charAt(0)) {
-						count ++;
+						count2 ++;
 					}
+					
 					j++;
 				}
 				i++;
 			}
-		}
-		
-		System.out.println(" count : " + count);
-		
-		return count;
+
+		result = Math.min(count1, count2);
+		return result;
 	}
 	
 	public static void main(String[] args) throws Exception {
@@ -81,26 +71,24 @@ public class Main_1018_체스판다시칠하기 {
 				chess[i][j] = arr2[j];
 			}
 		}
-			
+		
 		// 1. 세로를 기준으로 옆으로 밀어내면서 체스판을 생성하고
 		// 2. 세로를 기준으로 더이상 밀어낼 공간이 없다면 밑으로 한칸 내려가서 위 과정을 다시 반복
-		for(int x=0; x<N-8; x++) {
+		for(int x=0; x<=N-8; x++) {
 			String temp[][] = new String[8][8];
 
-			for(int y=0; y<M-8; y++) {
+			for(int y=0; y<=M-8; y++) {
 				int g = 0;
-				for(int i=x; i<x+8; i++) {
+				
+				for(int i=x; i<=x+7; i++) {
 					int s = 0;
-					for(int j=y; j<y+8; j++) {
-						System.out.print(chess[i][j]);
-						//System.out.println(" g: " + g + " s: " + s);
+					
+					for(int j=y; j<=y+7; j++) {
 						temp[g][s] = chess[i][j];
 						
 						if(g == 7 && s == 7) {
 							num = find(temp);
-							System.out.println(" num : " + num);
-							System.out.println(" min : " + min);
-							
+
 							
 							// 만약 새로운 값 num이 지금까지의 최솟값 min보다 작다면
 							// 또는 지금까지의 최솟값 min 보다 새로운 값 num이 크다면 
@@ -114,13 +102,11 @@ public class Main_1018_체스판다시칠하기 {
 						s++;
 					}
 					g++;
-					System.out.println(" ");
 				}
-				System.out.println(" ");
 			}
 		}
 
-		System.out.println("min : " + min);
-		
+		System.out.println(min);
+
 	}
 }
