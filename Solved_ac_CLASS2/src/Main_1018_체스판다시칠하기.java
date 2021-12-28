@@ -92,14 +92,20 @@ public class Main_1018_체스판다시칠하기 {
 				for(int i=x; i<x+8; i++) {
 					int s = 0;
 					for(int j=y; j<y+8; j++) {
-						System.out.println(chess[i][j]);
+						System.out.print(chess[i][j]);
 						//System.out.println(" g: " + g + " s: " + s);
 						temp[g][s] = chess[i][j];
 						
 						if(g == 7 && s == 7) {
 							num = find(temp);
 							System.out.println(" num : " + num);
+							System.out.println(" min : " + min);
 							
+							
+							// 만약 새로운 값 num이 지금까지의 최솟값 min보다 작다면
+							// 또는 지금까지의 최솟값 min 보다 새로운 값 num이 크다면 
+							// min최솟값을 num값으로 갱신한다.
+							// 이렇게 해서 지속적으로 가장 작은 최솟값을 찾아낸다.
 							if(num < min) {
 								min = num;
 							}
