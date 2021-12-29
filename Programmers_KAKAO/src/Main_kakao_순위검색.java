@@ -9,14 +9,15 @@ public class Main_kakao_순위검색 {
 		
 		for(int i=0; i<info.length; i++) {
 			String temp = info[i];
-			System.out.println(temp);
-			
-			for(int j=0; j<5; j++) {	
-				
-			}
+			list.add(temp);
+		}
+		
+		for(int i=0; i<list.size(); i++) {
+			String temp = list.get(i);
 			
 			
 		}
+		
 
 		return answer;
 	}
