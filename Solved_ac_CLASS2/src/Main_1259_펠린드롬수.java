@@ -3,7 +3,7 @@ import java.util.*;
 
 public class Main_1259_Æç¸°µå·Ò¼ö {
 	public static void main(String[] args) throws Exception {
-		System.setIn(new FileInputStream("res/input_bj_1259.txt"));
+		System.setIn(new FileInputStream("res/input_bj_2675.txt"));
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		
 		int loopCount = Integer.parseInt(br.readLine());
@@ -23,7 +23,7 @@ public class Main_1259_Æç¸°µå·Ò¼ö {
 			}
 			System.out.print(temp);
 			System.out.println(" ");
-		}
+		} 
 		
 		br.close();
 	}
