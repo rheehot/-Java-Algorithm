@@ -27,5 +27,7 @@ public class Main_8958_OX퀴즈 {
 			sum = 0;
 			count = 0;
 		}
+		// 시발 기억안난다 그거 찾으면 다 시 말해줄게..
+
 	}
 }

@@ -26,7 +26,6 @@ public class Main_1181_단어정렬 {
 		for(Map.Entry<String, Integer> entry : entryList) {
 			System.out.println(entry.getKey());
 		}
-		
-		
+			
 	}
 }
