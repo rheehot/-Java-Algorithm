@@ -37,5 +37,7 @@ public class Main_1463_¿µÈ­°¨µ¶¼ò {
 			
 			i++;
 		}
+		
+		br.close();
 	}
 }

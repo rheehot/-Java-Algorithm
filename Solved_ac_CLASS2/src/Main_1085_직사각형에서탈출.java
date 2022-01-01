@@ -26,5 +26,6 @@ public class Main_1085_직사각형에서탈출 {
 		int colMin = Math.min(col1, col2);
 		
 		System.out.println(Math.min(rowMin, colMin));
+		br.close();
 	}
 }
